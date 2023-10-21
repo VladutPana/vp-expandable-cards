@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import {motion} from 'framer-motion'
-import photo1 from '../assets/1.jpg'
-import photo2 from '../assets/2.jpg'
-import photo3 from '../assets/3.jpg'
-import photo4 from '../assets/4.jpg'
-import photo5 from '../assets/5.jpg'
+import photo1 from './assets/1.jpg'
+import photo2 from './assets/2.jpg'
+import photo3 from './assets/3.jpg'
+import photo4 from './assets/4.jpg'
+import photo5 from './assets/5.jpg'
 
 const App = () => {
 
@@ -51,7 +51,7 @@ const App = () => {
             variants={cardVariants}
             initial="collapsed"
             animate={index === expandedIndex ? 'expanded': 'collapsed'}
-            transition={{duration: 0.5}}
+            transition={{duration: 0.5, type: 'tween'}}
             onClick={() => handleCardClick(index)}
             style={{
                             backgroundImage: `url(${cardImages[index]})`,
